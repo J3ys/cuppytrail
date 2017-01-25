@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jan 5, 2017 5:50:14 PM                      ---
+ * --- Generated at 24 січ. 2017 17:55:26                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.cuppytrailcockpit.jalo;

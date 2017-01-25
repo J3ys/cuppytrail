@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jan 5, 2017 3:47:17 PM                      ---
+ * --- Generated at 24 січ. 2017 17:55:26                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.constants;
@@ -16,6 +16,7 @@ public class GeneratedCuppytrailConstants
 	public static final String EXTENSIONNAME = "cuppytrail";
 	public static class TC
 	{
+		public static final String NOTEMPTYCUPPYCONSTRAINT = "NotEmptyCuppyConstraint".intern();
 		public static final String STADIUM = "Stadium".intern();
 		public static final String STADIUMACCESS = "StadiumAccess".intern();
 		public static final String STADIUMTYPE = "StadiumType".intern();

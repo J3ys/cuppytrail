@@ -1,12 +1,13 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jan 5, 2017 3:47:17 PM                      ---
+ * --- Generated at 24 січ. 2017 17:55:26                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.jalo;
 
 import com.epam.constants.CuppytrailConstants;
+import com.epam.constraints.constraints.NotEmptyCuppyConstraint;
 import com.epam.jalo.Stadium;
 import de.hybris.platform.cuppy.jalo.Match;
 import de.hybris.platform.jalo.GenericItem;
@@ -47,6 +48,32 @@ public abstract class GeneratedCuppytrailManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	public NotEmptyCuppyConstraint createNotEmptyCuppyConstraint(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( CuppytrailConstants.TC.NOTEMPTYCUPPYCONSTRAINT );
+			return (NotEmptyCuppyConstraint)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating NotEmptyCuppyConstraint : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public NotEmptyCuppyConstraint createNotEmptyCuppyConstraint(final Map attributeValues)
+	{
+		return createNotEmptyCuppyConstraint( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public Stadium createStadium(final SessionContext ctx, final Map attributeValues)

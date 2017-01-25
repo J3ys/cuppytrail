@@ -51,6 +51,19 @@
 			</attributes>
 		</itemtype>
 		
+		<itemtype code="NotEmptyCuppyConstraint" autocreate="true" generate="true" extends="AttributeConstraint"
+		jaloclass="com.epam.constraints.constraints.NotEmptyCuppyConstraint">
+		<description>Custom constraint which checks for empty strings.</description>
+		<attributes>
+			<attribute qualifier="annotation" type="java.lang.Class" redeclare="true">
+				<modifiers write="false" initial="true" optional="false"/>
+				<defaultvalue>
+					com.epam.constraints.NotEmptyCuppy.class
+				</defaultvalue>
+			</attribute>
+		</attributes>
+	</itemtype>
+		
 	</itemtypes>
 	
 	
