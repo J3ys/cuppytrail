@@ -1,13 +1,13 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 24 січ. 2017 17:55:26                       ---
+ * --- Generated at 25 січ. 2017 15:20:01                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.jalo;
 
 import com.epam.constants.CuppytrailConstants;
-import com.epam.constraints.constraints.NotEmptyCuppyConstraint;
+import com.epam.constraints.NotEmptyCuppyConstraint;
 import com.epam.jalo.Stadium;
 import de.hybris.platform.cuppy.jalo.Match;
 import de.hybris.platform.jalo.GenericItem;

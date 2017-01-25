@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="C:\hybris_trails\h\hybris\bin\custom\cuppytrail\cuppytrailhmc/hmc/classes" />
+  </classpath>
+</application>

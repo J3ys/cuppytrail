@@ -33,7 +33,7 @@ import javax.validation.Payload;
 @Documented
 public @interface NotEmptyCuppy
 {
-	String message() default "{de.hybris.platform.cuppytrail.constraints.NotEmptyCuppy.message}";
+	String message();
 
 	Class<?>[] groups() default {};
 

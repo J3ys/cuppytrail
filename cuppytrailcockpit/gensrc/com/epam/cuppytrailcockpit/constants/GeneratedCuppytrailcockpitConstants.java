@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 24 січ. 2017 17:55:26                       ---
+ * --- Generated at 25 січ. 2017 11:36:02                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.cuppytrailcockpit.constants;

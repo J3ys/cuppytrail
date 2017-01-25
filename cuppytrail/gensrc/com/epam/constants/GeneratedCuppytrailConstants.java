@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 24 січ. 2017 17:55:26                       ---
+ * --- Generated at 25 січ. 2017 15:20:01                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.constants;
@@ -26,6 +26,10 @@ public class GeneratedCuppytrailConstants
 		public static class Match
 		{
 			public static final String STADIUM = "stadium".intern();
+		}
+		public static class MatchBet
+		{
+			public static final String MATCHSCORE = "matchScore".intern();
 		}
 	}
 	public static class Enumerations

@@ -1,7 +1,7 @@
 package com.epam.service.impl;
 
-import static org.fest.assertions.Assertions.assertThat;
 import static com.epam.constants.CuppytrailConstants.PLATFORM_LOGO_CODE;
+import static org.fest.assertions.Assertions.assertThat;
 
 import de.hybris.bootstrap.annotations.IntegrationTest;
 import de.hybris.platform.core.model.media.MediaModel;
@@ -13,8 +13,8 @@ import javax.annotation.Resource;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import com.epam.service.CuppytrailService;
-import com.epam.service.impl.DefaultCuppytrailService;
 
 
 /**
