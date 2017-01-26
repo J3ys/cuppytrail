@@ -31,6 +31,7 @@
 		<property name="name" type="String"/>
 		<property name="capacity" type="String"/>
 		<property name="matches" type="java.util.List&lt;com.epam.data.MatchSummaryData>"/>
+		<property name="imageUrl" type="String"/>
 	</bean>
 	<!--
 		Example Data POJO

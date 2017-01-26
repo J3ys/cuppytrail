@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 25 січ. 2017 15:20:01                       ---
+ * --- Generated at 25 січ. 2017 18:46:34                       ---
  * ----------------------------------------------------------------
  */
 package com.epam.constants;

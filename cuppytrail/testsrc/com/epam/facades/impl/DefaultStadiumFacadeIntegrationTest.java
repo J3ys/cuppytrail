@@ -30,9 +30,6 @@ import com.epam.facades.StadiumFacade;
 import com.epam.model.StadiumModel;
 
 
-/**
- * This test file tests and demonstrates the behavior of the StadiumFacade's methods getAllStadiums and getStadium.
- */
 public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransactionalTest
 {
 	@Resource
@@ -44,6 +41,8 @@ public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransaction
 	private StadiumModel stadiumModel;
 	private final String STADIUM_NAME = "wembley";
 	private final Integer STADIUM_CAPACITY = Integer.valueOf(90000);
+	public static final String IMAGE_URL = "testUrl";
+	public static final String CONVERSION_MEDIA_FORMAT = "conversionMediaFormatTest";
 
 	@Before
 	public void setUp()
@@ -54,44 +53,29 @@ public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransaction
 		stadiumModel.setCapacity(STADIUM_CAPACITY);
 	}
 
-	/**
-	 * Tests exception behavior by getting a stadium which doesn't exist
-	 */
 	@Test(expected = UnknownIdentifierException.class)
-	public void testInvalidParameter()
+	public void testFailBehavior()
 	{
-		stadiumFacade.getStadium(STADIUM_NAME);
+		stadiumFacade.getStadium(STADIUM_NAME, "UninportantFormat");
 	}
 
-	/**
-	 * Tests exception behavior by passing in a null parameter
-	 */
-	@Test(expected = IllegalArgumentException.class)
-	public void testNullParameter()
-	{
-		stadiumFacade.getStadium(null);
-	}
-
-	/**
-	 * Tests and demonstrates the Facade's methods
-	 */
 	@Test
 	public void testStadiumFacade()
 	{
-		List<StadiumData> stadiumListData = stadiumFacade.getStadiums();
+		List<StadiumData> stadiumListData = stadiumFacade.getStadiums(CONVERSION_MEDIA_FORMAT);
 		assertNotNull(stadiumListData);
 		final int size = stadiumListData.size();
 		modelService.save(stadiumModel);
 
-		stadiumListData = stadiumFacade.getStadiums();
+		stadiumListData = stadiumFacade.getStadiums(CONVERSION_MEDIA_FORMAT);
 		assertNotNull(stadiumListData);
 		assertEquals(size + 1, stadiumListData.size());
-		assertEquals(STADIUM_NAME, stadiumListData.get(size).getName());
-		assertEquals(STADIUM_CAPACITY.toString(), stadiumListData.get(size).getCapacity());
+		assertEquals(stadiumListData.get(size).getName(), STADIUM_NAME);
+		assertEquals(stadiumListData.get(size).getCapacity(), STADIUM_CAPACITY.toString());
 
-		final StadiumData persistedStadiumData = stadiumFacade.getStadium(STADIUM_NAME);
+		final StadiumData persistedStadiumData = stadiumFacade.getStadium(STADIUM_NAME, "UninportantFormat");
 		assertNotNull(persistedStadiumData);
-		assertEquals(STADIUM_NAME, persistedStadiumData.getName());
-		assertEquals(STADIUM_CAPACITY.toString(), persistedStadiumData.getCapacity());
+		assertEquals(persistedStadiumData.getName(), STADIUM_NAME);
+		assertEquals(persistedStadiumData.getCapacity(), STADIUM_CAPACITY.toString());
 	}
 }

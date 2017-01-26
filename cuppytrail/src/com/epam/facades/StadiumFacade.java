@@ -18,8 +18,9 @@ import com.epam.data.StadiumData;
 
 public interface StadiumFacade
 {
-	StadiumData getStadium(String name);
 
-	List<StadiumData> getStadiums();
+	List<StadiumData> getStadiums(String format);
+
+	StadiumData getStadium(String name, String format);
 
 }

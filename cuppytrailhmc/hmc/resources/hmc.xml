@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<configuration xmlns="hybris.de/schemas/hmc/generic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<configuration xmlns="hybris.de/schemas/hmc/generic"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="hybris.de/schemas/hmc/generic hmc.xsd">
 
 	<!-- Configuration for extension cuppytrail -->
@@ -41,5 +42,31 @@
 				</tab>
 			</editor>
 		</organizer>
+	</type>
+
+	<type name="MatchBet" mode="append">
+		<organizer>
+			<result>
+				<listview mode="append">
+					<itemlayout mode="append">
+						<attribute name="matchScore" />
+					</itemlayout>
+				</listview>
+			</result>
+			<editor>
+				<tab name="tab.cuppy">
+					<section name="section.cuppy">
+						<listlayout>
+							<attribute name="matchScore" />
+						</listlayout>
+					</section>
+				</tab>
+			</editor>
+		</organizer>
+		<defaultreference mode="append">
+			<itemlayout mode="append">
+				<attribute name="matchScore" />
+			</itemlayout>
+		</defaultreference>
 	</type>
 </configuration>
